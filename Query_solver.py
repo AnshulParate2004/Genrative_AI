@@ -2,11 +2,15 @@ from openai import OpenAI
 import json 
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",  # Replace securely!
-)
+    api_key=os.getenv("OPENROUTER_API_KEY") 
+    )
+
 
 def query_db(sql):
     pass
@@ -100,6 +104,7 @@ while True:
         if parsed_output.get("step") == "plan":
             print(f"🧠:{parsed_output.get('content')}")
             continue
+
 
         if parsed_output.get("step") == "action":
             tool_name = parsed_output.get("function")
