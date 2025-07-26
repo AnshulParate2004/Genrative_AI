@@ -92,10 +92,10 @@ while True:
 
     while True:
         completion = client.chat.completions.create(
-            model="openai/gpt-3.5-turbo",
+            model="gpt-4o",
             response_format= {"type":"json_object"},
             messages=messages,
-            max_tokens=1000,
+            max_tokens=700,
             temperature=0.4
         )
         parsed_output = json.loads(completion.choices[0].message.content)
