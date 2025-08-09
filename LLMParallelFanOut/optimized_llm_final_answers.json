@@ -1,14 +1,14 @@
 {
   "original": {
-    "question": "What is the sun?",
-    "optimized_final": "{\n  \"final_answer\": \"The sun is a G-type main-sequence star, a massive celestial body composed mainly of hydrogen and helium, at the center of our solar system. Through nuclear fusion in its core, it converts hydrogen to helium, releasing tremendous energy as light and heat, which is essential for life on Earth, driving weather patterns, supporting plant growth, and warming our planet, while its gravity holds the planets in orbit.\"\n}"
+    "question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+    "optimized_final": "{\n  \"final_answer\": \"You need to attend 2 more days to reach more than 75% attendance.\"\n}"
   },
   "abstract": {
-    "question": "What are celestial bodies?",
-    "optimized_final": "{\n  \"final_answer\": \"Celestial bodies are natural objects in the universe, encompassing a wide range of entities found in outer space, including stars, planets, moons, asteroids, comets, meteoroids, dwarf planets, and galaxies, which are vast collections of stars, gas, dust, and dark matter held together by gravity.\"\n}"
+    "question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+    "optimized_final": "{\n  \"final_answer\": \"To determine how many more days of classes you must attend to achieve an attendance rate above 75%, calculate 75% of the total number of classes in the semester and subtract your current attendance. This will give you the number of additional classes needed.\"\n}"
   },
   "detailed": {
-    "question": "What is the composition and function of the sun in our solar system?",
-    "optimized_final": "{\n  \"final_answer\": \"The Sun, a giant ball of hot gas, is primarily composed of hydrogen and helium. Its core generates immense energy through nuclear fusion, releasing light and heat that support life on Earth, drive weather patterns, and enable photosynthesis. The Sun's gravity also holds the planets in their orbits, creating the structure of our solar system.\"\n}"
+    "question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
+    "optimized_final": "{\n  \"final_answer\": \"You need 2 more days of perfect attendance to exceed a 75 percent attendance rate.\"\n}"
   }
 }

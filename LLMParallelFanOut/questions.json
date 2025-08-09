@@ -1,5 +1,5 @@
 {
-    "original": "What is the sun?",
-    "abstract": "What are celestial bodies?",
-    "detailed": "What is the composition and function of the sun in our solar system?"
+    "original": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+    "abstract": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+    "detailed": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?"
 }

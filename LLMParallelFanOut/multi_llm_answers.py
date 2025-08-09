@@ -2,6 +2,8 @@
 import requests
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dotenv import load_dotenv
+import os
 
 # === CONFIG ===
 load_dotenv()

@@ -1,0 +1,150 @@
+{
+    "query": "What is payment of genrative ai devloper in INdia ?",
+    "Tavily": {
+        "query": "What is payment of genrative ai devloper in INdia ?",
+        "follow_up_questions": null,
+        "answer": "A generative AI developer in India earns an average base salary of \u20b99 lakhs per year, with ranges from \u20b94 lakhs to \u20b912 lakhs depending on experience. Higher salaries can reach \u20b9167 lakhs.",
+        "images": [],
+        "results": [
+            {
+                "url": "https://www.glassdoor.co.in/Salaries/generative-ai-engineer-salary-SRCH_KO0,22.htm",
+                "title": "Salary: Generative Ai Engineer in India 2025 - Glassdoor",
+                "content": "Generative Ai Engineer salaries in India. Experience All years of experience. Base pay. \u20b94L - \u20b912.0L/yr. \u20b99L/yrAverage base pay. Additional salary.",
+                "score": 0.9859,
+                "raw_content": null
+            },
+            {
+                "url": "https://www.glassdoor.com/Salaries/generative-ai-engineer-salary-SRCH_KO0,22.htm",
+                "title": "Salary: Generative Ai Engineer in United States 2025 - Glassdoor",
+                "content": "The average salary for a Generative AI Engineer is $132,902 per year or $64 per hour in United States, which is in line with the national average. Top",
+                "score": 0.98526,
+                "raw_content": null
+            },
+            {
+                "url": "https://6figr.com/in/salary/generative-ai--s",
+                "title": "Generative Ai Salaries 2025 in India, Average salary \u20b938 lakhs",
+                "content": "Average salary is \u20b937.7lakhs.  Employees who know Generative Ai earn an average of \u20b937.7lakhs, mostly ranging from \u20b920.7lakhs to \u20b9167.1lakhs based on 419 profiles.",
+                "score": 0.98511,
+                "raw_content": null
+            },
+            {
+                "url": "https://generativeaimasters.in/generative-ai-salary-in-india/",
+                "title": "Latest Trend In Generative AI Salary In India | 2025",
+                "content": "Average Salary Range: For entry-level positions in Generative AI, the salary typically ranges from \u20b96 lakhs to \u20b912 lakhs per annum. This can vary depending on",
+                "score": 0.98174,
+                "raw_content": null
+            },
+            {
+                "url": "https://www.coursera.org/in/articles/ai-engineer-salary",
+                "title": "How Much Do AI Engineers Make? 2025 Salary Guide - Coursera",
+                "content": "In this article, you\u2019ll learn how much an AI engineer earns. What is an average AI engineer\u2019s salary? Falling under the category of Artificial Intelligence Specialist, AI engineers can earn an annual median salary of \u20b912,51,419, according to Payscale [2_Specialist/Salary/ef18f689/Artificial-Intelligence-AI)]. According to Glassdoor, the average base salary for an AI engineer in India is \u20b911,67,563 per year [3]. AI engineer salaries by experience Here\u2019s how experience can impact your AI engineer salary, according to Payscale: *   Early career (1-4 years): \u20b911,00,000 [2_Specialist/Salary/ef18f689/Artificial-Intelligence-AI)] *   Mid-career (5-9 years): \u20b924,56,588 [2_Specialist/Salary/ef18f689/Artificial-Intelligence-AI)] AI engineer salaries by industry AI engineer salaries by location Enroll in IBM\u2019s AI Engineering Professional Certificate to learn how to provide business insights from big data using machine learning and deep learning techniques.",
+                "score": 0.94673,
+                "raw_content": null
+            }
+        ],
+        "response_time": 4.43
+    },
+    "Serper": {
+        "searchParameters": {
+            "q": "What is payment of genrative ai devloper in INdia ?",
+            "type": "search",
+            "engine": "google"
+        },
+        "organic": [
+            {
+                "title": "Latest Trend In Generative AI Salary In India | 2025",
+                "link": "https://generativeaimasters.in/generative-ai-salary-in-india/",
+                "snippet": "Indian Firms: Salaries for Generative AI roles might range from \u20b910 lakhs to \u20b930 lakhs per annum .",
+                "position": 1
+            },
+            {
+                "title": "Salary: Generative Ai Engineer in India 2025 - Glassdoor",
+                "link": "https://www.glassdoor.co.in/Salaries/generative-ai-engineer-salary-SRCH_KO0,22.htm",
+                "snippet": "The average salary for a Generative Ai Engineer is \u20b99,77000 per year in India. Click here to see the total pay, recent salaries shared and more!",
+                "position": 2
+            },
+            {
+                "title": "Generative AI Salary in India in 2025 | Freshers to Experts",
+                "link": "https://www.pynetlabs.com/generative-ai-salary-in-india/",
+                "snippet": "The salary of generative AI is somewhere between INR 5 lakh to INR 20 lakh per annum. There are many factors in the salary you get, including ...",
+                "date": "Apr 16, 2025",
+                "position": 3
+            },
+            {
+                "title": "Salary: Generative Ai Designer in India 2025 - Glassdoor",
+                "link": "https://www.glassdoor.co.in/Salaries/generative-ai-designer-salary-SRCH_KO0,22.htm",
+                "snippet": "The average salary for a Generative Ai Designer is \u20b94,13975 per year in India. Click here to see the total pay, recent salaries shared and ...",
+                "date": "Jul 20, 2025",
+                "position": 4
+            },
+            {
+                "title": "Generative AI Engineer Salary Trends (Updated 2025) - igmGuru",
+                "link": "https://www.igmguru.com/blog/generative-ai-engineer-salary",
+                "snippet": "While, in India, it usually ranges from INR 15 to INR 20 lakh per year, which is about $18,000 to $25,000. Senior-Level Engineers (5+ years ...",
+                "date": "Jun 26, 2025",
+                "position": 5
+            },
+            {
+                "title": "Generative Ai Salaries 2025 in India, Average salary \u20b938 lakhs",
+                "link": "https://6figr.com/in/salary/generative-ai--s",
+                "snippet": "Average salary is \u20b937.7lakhs. Employees who know Generative Ai earn an average of \u20b937.7lakhs, mostly ranging from \u20b920.7lakhs to \u20b9167.1lakhs ...",
+                "date": "6 days ago",
+                "position": 6
+            },
+            {
+                "title": "Artificial Intelligence Developer Salary in India (Updated 2025)",
+                "link": "https://www.ambitionbox.com/profile/artificial-intelligence-developer-salary",
+                "snippet": "The average starting salary is around \u20b92.0 Lakhs to \u20b939.4 Lakhs per year, with the highest salary reaching \u20b935.0 Lakhs to \u20b960.0 Lakhs per year. Salary estimates ...",
+                "position": 7
+            },
+            {
+                "title": "Generative AI Engineer Salary for Freshers - Softlogic",
+                "link": "https://www.softlogicsys.in/generative-ai-engineer-salary-for-freshers/",
+                "snippet": "In India, a fresher can expect \u20b95-10 LPA, while experienced professionals can earn \u20b920-40 LPA or even more, reflecting this high-growth sector's ...",
+                "date": "15 hours ago",
+                "position": 8
+            },
+            {
+                "title": "AI Engineer Salary in India [For Beginners & Experienced] in 2025",
+                "link": "https://www.upgrad.com/blog/artificial-intelligence-salary-india-beginners-experienced/",
+                "snippet": "The entry-level AI salary for an AI engineer in India is around \u20b95,00,000 per annum. Mid-level professionals make around \u20b910,00,000 per year.",
+                "date": "Jun 11, 2025",
+                "position": 9
+            },
+            {
+                "title": "Generative AI Salaries in India - Sector 6 | The Newsletter of AIM",
+                "link": "https://analyticsindiamagazine.substack.com/p/generative-ai-salaries-in-india",
+                "snippet": "For instance, while generative AI developers and engineers earn median salaries of INR 11.1 lakh and 12.5 lakh per annum, respectively ...",
+                "date": "Apr 21, 2024",
+                "position": 10
+            }
+        ],
+        "relatedSearches": [
+            {
+                "query": "gen ai developer salary"
+            },
+            {
+                "query": "generative ai developer course"
+            },
+            {
+                "query": "generative ai course"
+            },
+            {
+                "query": "generative ai developer jobs"
+            },
+            {
+                "query": "how to become generative ai engineer"
+            },
+            {
+                "query": "generative ai analyst salary"
+            },
+            {
+                "query": "generative ai roadmap"
+            },
+            {
+                "query": "how to learn generative ai"
+            }
+        ],
+        "credits": 1
+    }
+}

@@ -1,102 +1,102 @@
 {
   "variants": {
-    "original": "What is the sun?",
-    "abstract": "What are celestial bodies?",
-    "detailed": "What is the composition and function of the sun in our solar system?"
+    "original": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+    "abstract": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+    "detailed": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?"
   },
   "responses": {
     "original": {
       "gemma2-9b-it": {
         "model": "llama3-8b",
-        "user_question": "What is the sun?",
-        "draft": "The sun is a star that provides light and heat to Earth.",
-        "analysis": "This is a basic definition but lacks detail about the sun's composition, size, or role in the solar system.",
-        "revision": "The sun is a giant ball of hot gas, primarily hydrogen and helium, at the center of our solar system. Its immense gravity holds the planets in orbit, and nuclear fusion in its core produces the light and heat that sustain life on Earth.",
-        "final": "The sun is a star, a massive celestial body composed mainly of hydrogen and helium. Through nuclear fusion, it converts hydrogen to helium, releasing tremendous energy as light and heat. This energy is essential for life on Earth, driving weather patterns, supporting plant growth, and warming our planet. The sun's gravity holds the planets in orbit, making it the anchor of our solar system.",
+        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+        "draft": "To have more than 75% attendance, you need to attend 56.25 classes.  You need to attend 5 more classes.",
+        "analysis": "The draft incorrectly calculates the required attendance and assumes a simple linear relationship between days and classes attended.",
+        "revision": "To achieve over 75% attendance, you need to attend at least 56.25 out of 75 classes.  You've already attended 51, so you need to attend an additional 5.25 classes.",
+        "final": "You need to attend at least 56.25 out of 75 classes to have over 75% attendance.  Since you've already attended 51, you need to attend an additional 5.25 classes.  This means you'll need to attend more than 5 full days to reach your goal.",
+        "confidence": "medium",
+        "sources": "common knowledge"
+      },
+      "llama-3.3-70b-versatile": {
+        "model": "llama3-8b",
+        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+        "draft": "To find out how many more days you need to attend, first calculate the total number of classes needed for more than 75% attendance, which is more than 0.75 * total_classes. Since you've attended 51 out of 75, you need more than 56.25 classes. Given 4 classes per day, you need to attend more than 56.25 - 51 = 5.25 classes, which translates to more than 1.3125 days of classes.",
+        "analysis": "Assumes total classes remain at 75, and attendance rate calculation is correct",
+        "revision": "The calculation of more than 75% of 75 classes is correct, which is more than 56.25 classes. Since you have already attended 51 classes, you need to attend more than 5.25 classes to exceed 75% attendance. With 4 classes per day, you would need to attend more than 5.25 / 4 = 1.3125 days. However, since you cannot attend a fraction of a day, you would need to attend 2 more days to ensure your attendance is more than 75%.",
+        "final": "To achieve more than 75% attendance, you need to attend more than 5.25 classes. Given 4 classes per day, attending 2 more days will ensure you exceed 75% attendance.",
         "confidence": "high",
         "sources": "common knowledge"
       },
       "llama3-70b-8192": {
         "model": "llama3-8b",
-        "user_question": "What is the sun?",
-        "draft": "The sun is a massive ball of hot, glowing gas in our solar system.",
-        "analysis": "Assumes the sun is only a ball of hot gas, neglecting its composition and role in the solar system.",
-        "revision": "The sun is a massive, luminous ball of plasma, primarily composed of hydrogen and helium, at the center of our solar system, providing energy and light to the planets.",
-        "final": "The sun is a massive, luminous ball of plasma, primarily composed of hydrogen and helium, at the center of our solar system, providing energy and light to the planets through nuclear reactions in its core.",
-        "confidence": "high",
-        "sources": "common knowledge"
-      },
-      "llama-3.3-70b-versatile": {
-        "model": "disciplined-multi-stage-reasoning",
-        "user_question": "What is the sun?",
-        "draft": "The sun is a star at the center of our solar system, providing light and heat to Earth. It is a massive ball of hot, glowing gas.",
-        "analysis": "Assumes basic astronomy knowledge, lacks detail on composition and function",
-        "revision": "The sun is a G-type main-sequence star, composed mostly of hydrogen and helium, and is the primary source of light and energy for our solar system. Its core is incredibly hot, causing nuclear reactions that release vast amounts of energy.",
-        "final": "The sun is a G-type main-sequence star at the center of our solar system, composed of hydrogen and helium, and is the primary source of light and energy for our planet through nuclear reactions in its core.",
+        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
+        "draft": "To find the number of days, we need to calculate the total number of classes required for more than 75 percent attendance and then subtract the classes already attended.",
+        "analysis": "Assumes 75 percent of total classes is the target, and the total number of classes is not explicitly given.",
+        "revision": "First, we need to find the total number of classes required for more than 75 percent attendance. Since 75 percent of 75 is 56.25, we need to attend at least 57 classes. Then, we can calculate the number of days required to attend the remaining classes.",
+        "final": "You need to attend at least 57 classes for more than 75 percent attendance. You have already attended 51 classes, so you need to attend 6 more classes. Since 4 classes happen each day, you need to attend 6/4 = 1.5 days more, which means you need to attend 2 more days.",
         "confidence": "high",
         "sources": "common knowledge"
       }
     },
     "abstract": {
-      "llama-3.3-70b-versatile": {
-        "model": "disciplined-multi-stage-reasoning",
-        "user_question": "What are celestial bodies?",
-        "draft": "Celestial bodies are objects in the universe, including stars, planets, and moons. They can be natural or artificial, such as satellites.",
-        "analysis": "Lack of specificity, broad definition",
-        "revision": "Celestial bodies refer to natural objects in the universe, including stars, planets, dwarf planets, moons, asteroids, comets, and meteoroids. Artificial satellites are sometimes also considered celestial bodies in a broader sense, but the term typically refers to natural entities.",
-        "final": "Celestial bodies are natural objects in the universe, such as stars, planets, moons, asteroids, comets, and meteoroids. They can also include dwarf planets and other smaller entities, but generally exclude artificial objects like satellites.",
-        "confidence": "high",
-        "sources": "common knowledge"
-      },
       "gemma2-9b-it": {
         "model": "llama3-8b",
-        "user_question": "What are celestial bodies?",
-        "draft": "Celestial bodies are objects in space like stars, planets, and moons.",
-        "analysis": "This is a basic definition but could be more comprehensive. It doesn't mention other types of celestial bodies like galaxies or asteroids.",
-        "revision": "Celestial bodies are any naturally occurring objects in outer space. This includes stars, planets, moons, asteroids, comets, and galaxies.",
-        "final": "Celestial bodies encompass a wide range of objects found in outer space.  These include stars, which are giant balls of hot gas that emit light and heat, planets, which orbit stars, moons, which orbit planets, and smaller objects like asteroids and comets. Galaxies are vast collections of stars, gas, dust, and dark matter held together by gravity.",
-        "confidence": "high",
+        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+        "draft": "I need to know the total number of classes and your current attendance to calculate that.",
+        "analysis": "Missing information: total classes attended and total classes scheduled.",
+        "revision": "Please tell me the total number of classes you have and how many you've already attended so I can calculate how many more you need to go to for an attendance rate above 75%.",
+        "final": "To determine how many more classes you need to attend for an attendance rate above 75%, I need to know the total number of classes scheduled and the number of classes you've already attended.",
+        "confidence": "low",
+        "sources": "common knowledge"
+      },
+      "llama-3.3-70b-versatile": {
+        "model": "disciplined-multi-stage-reasoning",
+        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+        "draft": "To achieve an attendance rate above 75 percent, you need to attend more classes, but the exact number depends on the total number of classes and your current attendance. Assuming a typical semester with 100 classes, if you've attended 60 so far, you would need to attend at least 15 more classes to reach 75 percent.",
+        "analysis": "Lack of information on total classes and current attendance",
+        "revision": "The number of days of classes you must attend to achieve an attendance rate above 75 percent depends on the total number of classes in the semester and your current attendance record. Without this information, it's impossible to provide an exact number. However, the formula to calculate the required attendance is: (total classes * 0.75) - current attendance = required attendance.",
+        "final": "To determine how many more days of classes you must attend, calculate 75% of the total number of classes in the semester and subtract your current attendance. This will give you the number of additional classes needed to achieve an attendance rate above 75 percent.",
+        "confidence": "medium",
         "sources": "common knowledge"
       },
       "llama3-70b-8192": {
         "model": "llama3-8b",
-        "user_question": "What are celestial bodies?",
-        "draft": "Celestial bodies are objects in the universe that are outside of the Earth's atmosphere, such as stars, planets, and moons.",
-        "analysis": "The definition might be too narrow, as it excludes objects within the Earth's atmosphere, and the list of examples might not be exhaustive.",
-        "revision": "Celestial bodies are natural objects in the universe, including but not limited to stars, planets, moons, asteroids, comets, and galaxies.",
-        "final": "Celestial bodies are natural objects in the universe, ranging from small asteroids and comets to massive galaxies and everything in between, including stars, planets, and moons.",
-        "confidence": "high",
+        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
+        "draft": "To find the number of days needed, we need to know the total number of classes and the number of days you've already attended.",
+        "analysis": "The question lacks information about the total number of classes and current attendance rate.",
+        "revision": "Let's assume you know the total number of classes and your current attendance rate. You can calculate the number of days needed by subtracting the number of days you've already attended from the total number of classes, then dividing that by 0.75.",
+        "final": "To achieve an attendance rate above 75%, you'll need to attend a certain number of days, which depends on the total number of classes and your current attendance rate. Calculate the difference between the total classes and your current attendance, then divide by 0.75 to find the required number of days.",
+        "confidence": "medium",
         "sources": "common knowledge"
       }
     },
     "detailed": {
       "gemma2-9b-it": {
         "model": "llama3-8b",
-        "user_question": "What is the composition and function of the sun in our solar system?",
-        "draft": "The sun is mostly hydrogen and helium, and it generates energy through nuclear fusion. This energy is what keeps the planets in orbit.",
-        "analysis": "While mostly hydrogen and helium, the draft doesn't mention the sun's role in providing light and heat, crucial to life on Earth.",
-        "revision": "The sun is primarily composed of hydrogen and helium. Through nuclear fusion, it converts these elements into heavier ones, releasing vast amounts of energy as light and heat. This energy is essential for sustaining life on Earth and keeping the planets in orbit.",
-        "final": "The Sun, the heart of our solar system, is a giant ball of hot gas, mainly composed of hydrogen and helium. Its immense energy is generated through nuclear fusion, a process where hydrogen atoms fuse to form helium, releasing tremendous amounts of light and heat. This energy is vital for life on Earth, driving weather patterns, providing warmth, and enabling photosynthesis. The Sun's gravitational pull also holds the planets in their orbits, creating the structure of our solar system.",
+        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
+        "draft": "To exceed a 75% attendance rate, you need to attend 75% of 75 classes, which is 56.25 classes. You've already attended 51, so you need 5.25 more classes.",
+        "analysis": "The draft incorrectly assumes exceeding 75% means attending 75% of the total classes.  It also doesn't account for rounding.",
+        "revision": "To achieve over 75% attendance, you need to attend more than 56.25 out of 75 classes. You've already attended 51, so you need to attend an additional 5.25 classes.",
+        "final": "You've already attended a good portion of your classes! To surpass a 75% attendance rate, you'd need to attend at least 5 more classes.  Since you attend 4 classes per day, this would require an additional 1.25 days of perfect attendance.",
+        "confidence": "medium",
+        "sources": "common knowledge"
+      },
+      "llama-3.3-70b-versatile": {
+        "model": "llama3-8b",
+        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
+        "draft": "To exceed a 75 percent attendance rate, you need to attend more than 56.25 classes out of 75, so you need to attend additional classes to reach this threshold. With 4 classes per day, you would need to attend at least 2 more days of classes to exceed the 75 percent attendance rate.",
+        "analysis": "Assumes total classes remain at 75, and 75% threshold is calculated based on this total",
+        "revision": "First, calculate the minimum number of classes needed to exceed 75% attendance: 75 * 0.75 = 56.25, so you need more than 56 classes. You have already attended 51 classes, so you need to attend more than 56 - 51 = 5 classes. With 4 classes scheduled each day, you would need to attend at least 2 more days to exceed the 75 percent attendance rate, because attending 1 more day would only give you 4 additional classes, which is not enough.",
+        "final": "You need to attend more than 5 additional classes to exceed the 75 percent attendance rate. Since there are 4 classes per day, attending 2 more days will give you 8 additional classes, which exceeds the required number of classes. Therefore, you need 2 more days of perfect attendance to exceed a 75 percent attendance rate.",
         "confidence": "high",
         "sources": "common knowledge"
       },
       "llama3-70b-8192": {
         "model": "llama3-8b",
-        "user_question": "What is the composition and function of the sun in our solar system?",
-        "draft": "The sun is a massive ball of hot, glowing gas, primarily composed of hydrogen and helium, and it functions as the center of our solar system, providing light and heat to the planets.",
-        "analysis": "The draft lacks specific details on the sun's composition and function, and does not mention its energy source or role in planetary motion.",
-        "revision": "The sun is a massive ball of hot, glowing gas, primarily composed of about 75% hydrogen and 25% helium by mass, with a small amount of heavier elements. It functions as the center of our solar system, providing light and heat to the planets through nuclear reactions that occur in its core, and its gravity holds the planets in their orbits.",
-        "final": "The sun is a massive ball of hot, glowing gas, primarily composed of hydrogen and helium, and it functions as the center of our solar system, providing light and heat to the planets through nuclear reactions in its core, and its gravity holds the planets in their orbits.",
-        "confidence": "high",
-        "sources": "common knowledge"
-      },
-      "llama-3.3-70b-versatile": {
-        "model": "llama3-8b",
-        "user_question": "What is the composition and function of the sun in our solar system?",
-        "draft": "The sun is primarily composed of hydrogen and helium, and its main function is to generate energy through nuclear reactions. This energy is then emitted as light and heat, supporting life on Earth.",
-        "analysis": "Assumes complete knowledge of solar composition and function, lacks detail on nuclear reactions",
-        "revision": "The sun is mainly composed of about 75% hydrogen and 25% helium by mass, with trace amounts of heavier elements. Its core is where nuclear fusion occurs, converting hydrogen into helium and releasing vast amounts of energy in the form of light and heat, which supports life and influences planetary orbits in the solar system.",
-        "final": "The sun is primarily made up of hydrogen and helium and functions as the solar system's energy source through nuclear fusion in its core, emitting light and heat that support life on Earth and affect the orbits of planets.",
+        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
+        "draft": "To exceed 75 percent attendance, you need to attend at least 56 classes (75% of 75). You've already attended 51, so you need to attend 5 more classes. With 4 classes per day, you need 1.25 more days of perfect attendance.",
+        "analysis": "The draft assumes 75 percent of 75 classes is the target, but it's unclear if the 75 classes are the total or just the current count.",
+        "revision": "To exceed 75 percent attendance, you need to attend at least 56 classes (75% of 75). You've already attended 51, so you need to attend 5 more classes. With 4 classes per day, you need 1.25 more days of perfect attendance, assuming the total number of classes remains 75.",
+        "final": "You need 1.25 more days of perfect attendance to exceed a 75 percent attendance rate, assuming the total number of classes remains 75.",
         "confidence": "high",
         "sources": "common knowledge"
       }

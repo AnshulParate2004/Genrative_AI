@@ -1,5 +1,8 @@
 import json
 import requests
+from dotenv import load_dotenv
+import os
+
 
 # === CONFIG ===
 load_dotenv()
