@@ -14,7 +14,6 @@ def generate_question_variants(user_query):
     }
 
     SYSTEM_PROMPT = f"""
-
     You are a specialized Question Transformation AI.
 
     Your task is to take the input question from the user and produce THREE variations:

@@ -1,0 +1,5 @@
+{
+    "problem": "I have attended 51 classes out of 75 each day 4 classes happens how manyday i have to attend more to make my attendence more than 75 percent",
+    "solution_steps": "1. Total classes attended so far: 51\n2. Total classes conducted so far: 75\n3. To achieve more than 75% attendance, required attended classes: 75% of total classes conducted + 1 (to exceed 75%) = 57\n4. Classes needed to attend: 57 - 51 = 6",
+    "final_answer": 6
+}

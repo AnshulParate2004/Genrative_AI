@@ -1,103 +1,103 @@
 {
   "variants": {
-    "original": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
-    "abstract": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
-    "detailed": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?"
+    "original": "What is life?",
+    "abstract": "What constitutes existence?",
+    "detailed": "What are the fundamental biological, chemical, and physical processes that define living organisms and distinguish them from non-living systems?"
   },
   "responses": {
     "original": {
       "gemma2-9b-it": {
         "model": "llama3-8b",
-        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
-        "draft": "To have more than 75% attendance, you need to attend 56.25 classes.  You need to attend 5 more classes.",
-        "analysis": "The draft incorrectly calculates the required attendance and assumes a simple linear relationship between days and classes attended.",
-        "revision": "To achieve over 75% attendance, you need to attend at least 56.25 out of 75 classes.  You've already attended 51, so you need to attend an additional 5.25 classes.",
-        "final": "You need to attend at least 56.25 out of 75 classes to have over 75% attendance.  Since you've already attended 51, you need to attend an additional 5.25 classes.  This means you'll need to attend more than 5 full days to reach your goal.",
+        "user_question": "What is life?",
+        "draft": "Life is a complex process characterized by growth, reproduction, and adaptation.",
+        "analysis": "This definition is too broad and doesn't capture the full essence of life. It lacks nuance and doesn't address philosophical aspects.",
+        "revision": "Life is a multifaceted phenomenon encompassing biological processes, consciousness, and the ability to interact with and adapt to the environment. ",
+        "final": "Defining 'life' is a complex philosophical and scientific question.  Biologically, it involves processes like metabolism, growth, reproduction, and adaptation.  Philosophically, it delves into consciousness, purpose, and the meaning of existence. There is no single, universally accepted definition, as the concept of life continues to be explored and debated.",
+        "confidence": "medium",
+        "sources": "common knowledge"
+      },
+      "llama3-70b-8192": {
+        "model": "llama3-8b",
+        "user_question": "What is life?",
+        "draft": "Life is a complex and dynamic process that involves the existence of living organisms, characterized by growth, reproduction, and response to stimuli.",
+        "analysis": "The definition of life is still debated among scientists and philosophers; it's challenging to provide a universally accepted answer.",
+        "revision": "A more comprehensive understanding of life encompasses its biological, chemical, and physical aspects, as well as its subjective experiences and emotional dimensions.",
+        "final": "Life is a multifaceted and intricate phenomenon that encompasses the biological, chemical, and physical processes of living organisms, as well as their subjective experiences, emotions, and interactions with the environment.",
         "confidence": "medium",
         "sources": "common knowledge"
       },
       "llama-3.3-70b-versatile": {
         "model": "llama3-8b",
-        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
-        "draft": "To find out how many more days you need to attend, first calculate the total number of classes needed for more than 75% attendance, which is more than 0.75 * total_classes. Since you've attended 51 out of 75, you need more than 56.25 classes. Given 4 classes per day, you need to attend more than 56.25 - 51 = 5.25 classes, which translates to more than 1.3125 days of classes.",
-        "analysis": "Assumes total classes remain at 75, and attendance rate calculation is correct",
-        "revision": "The calculation of more than 75% of 75 classes is correct, which is more than 56.25 classes. Since you have already attended 51 classes, you need to attend more than 5.25 classes to exceed 75% attendance. With 4 classes per day, you would need to attend more than 5.25 / 4 = 1.3125 days. However, since you cannot attend a fraction of a day, you would need to attend 2 more days to ensure your attendance is more than 75%.",
-        "final": "To achieve more than 75% attendance, you need to attend more than 5.25 classes. Given 4 classes per day, attending 2 more days will ensure you exceed 75% attendance.",
-        "confidence": "high",
-        "sources": "common knowledge"
-      },
-      "llama3-70b-8192": {
-        "model": "llama3-8b",
-        "user_question": "I have attended 51 classes out of 75, and each day 4 classes happen, how many days do I have to attend more to make my attendance more than 75 percent?",
-        "draft": "To find the number of days, we need to calculate the total number of classes required for more than 75 percent attendance and then subtract the classes already attended.",
-        "analysis": "Assumes 75 percent of total classes is the target, and the total number of classes is not explicitly given.",
-        "revision": "First, we need to find the total number of classes required for more than 75 percent attendance. Since 75 percent of 75 is 56.25, we need to attend at least 57 classes. Then, we can calculate the number of days required to attend the remaining classes.",
-        "final": "You need to attend at least 57 classes for more than 75 percent attendance. You have already attended 51 classes, so you need to attend 6 more classes. Since 4 classes happen each day, you need to attend 6/4 = 1.5 days more, which means you need to attend 2 more days.",
-        "confidence": "high",
+        "user_question": "What is life?",
+        "draft": "Life is a complex and dynamic process that characterizes living organisms, involving growth, reproduction, and response to stimuli. It encompasses various aspects, including biological, psychological, and philosophical dimensions.",
+        "analysis": "Unclear boundaries, multiple definitions, and subjective interpretations",
+        "revision": "Life can be understood from different perspectives, including biological, where it refers to the condition that distinguishes organisms from inorganic objects, and philosophical, where it encompasses experiences, consciousness, and the human condition. A comprehensive definition must consider these diverse viewpoints.",
+        "final": "Life is a multifaceted concept that can be defined biologically as the condition distinguishing living organisms, but it also encompasses psychological, philosophical, and subjective aspects that make it unique to each individual's experience and perspective.",
+        "confidence": "medium",
         "sources": "common knowledge"
       }
     },
     "abstract": {
       "gemma2-9b-it": {
         "model": "llama3-8b",
-        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
-        "draft": "I need to know the total number of classes and your current attendance to calculate that.",
-        "analysis": "Missing information: total classes attended and total classes scheduled.",
-        "revision": "Please tell me the total number of classes you have and how many you've already attended so I can calculate how many more you need to go to for an attendance rate above 75%.",
-        "final": "To determine how many more classes you need to attend for an attendance rate above 75%, I need to know the total number of classes scheduled and the number of classes you've already attended.",
-        "confidence": "low",
-        "sources": "common knowledge"
-      },
-      "llama-3.3-70b-versatile": {
-        "model": "disciplined-multi-stage-reasoning",
-        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
-        "draft": "To achieve an attendance rate above 75 percent, you need to attend more classes, but the exact number depends on the total number of classes and your current attendance. Assuming a typical semester with 100 classes, if you've attended 60 so far, you would need to attend at least 15 more classes to reach 75 percent.",
-        "analysis": "Lack of information on total classes and current attendance",
-        "revision": "The number of days of classes you must attend to achieve an attendance rate above 75 percent depends on the total number of classes in the semester and your current attendance record. Without this information, it's impossible to provide an exact number. However, the formula to calculate the required attendance is: (total classes * 0.75) - current attendance = required attendance.",
-        "final": "To determine how many more days of classes you must attend, calculate 75% of the total number of classes in the semester and subtract your current attendance. This will give you the number of additional classes needed to achieve an attendance rate above 75 percent.",
+        "user_question": "What constitutes existence?",
+        "draft": "Existence is the state of being alive or real. It is characterized by having consciousness, physical presence, and the ability to interact with the world.",
+        "analysis": "The draft provides a simplistic definition of existence that may not encompass all philosophical perspectives. It relies on potentially subjective concepts like consciousness and lacks nuance.",
+        "revision": "Existence is a complex philosophical question with no single, universally accepted answer.  Different schools of thought define existence in various ways, considering factors like consciousness, physical presence, and the ability to interact with the world. ",
+        "final": "The concept of existence is a fundamental philosophical inquiry with diverse interpretations. Some define it as the state of being, characterized by awareness, physical form, and interaction with the environment. Others explore existence through the lens of consciousness, questioning what it means to be aware and how that relates to being. Ultimately, the definition of existence remains a matter of ongoing debate and personal reflection.",
         "confidence": "medium",
         "sources": "common knowledge"
       },
       "llama3-70b-8192": {
         "model": "llama3-8b",
-        "user_question": "How many more days of classes must I attend to achieve an attendance rate above 75 percent?",
-        "draft": "To find the number of days needed, we need to know the total number of classes and the number of days you've already attended.",
-        "analysis": "The question lacks information about the total number of classes and current attendance rate.",
-        "revision": "Let's assume you know the total number of classes and your current attendance rate. You can calculate the number of days needed by subtracting the number of days you've already attended from the total number of classes, then dividing that by 0.75.",
-        "final": "To achieve an attendance rate above 75%, you'll need to attend a certain number of days, which depends on the total number of classes and your current attendance rate. Calculate the difference between the total classes and your current attendance, then divide by 0.75 to find the required number of days.",
+        "user_question": "What constitutes existence?",
+        "draft": "Existence seems to be the state of being real or having a presence in the world, encompassing both physical and abstract entities.",
+        "analysis": "The draft is vague and lacks clear boundaries; it's unclear what constitutes 'real' or 'presence', and how to distinguish between existence and non-existence.",
+        "revision": "Existence can be understood as the quality of having a tangible or intangible presence, whether spatial, temporal, or conceptual, which can be perceived, experienced, or inferred.",
+        "final": "Existence is a multifaceted concept that encompasses various forms of being, including physical objects, abstract ideas, and conscious experiences, which can be perceived, experienced, or inferred through our senses, reason, or intuition.",
+        "confidence": "medium",
+        "sources": "common knowledge"
+      },
+      "llama-3.3-70b-versatile": {
+        "model": "disciplined multi-stage reasoning assistant",
+        "user_question": "What constitutes existence?",
+        "draft": "Existence may be considered as the state of being real or having reality, encompassing everything that is, has been, or will be. It involves the presence of entities, objects, or concepts in space and time.",
+        "analysis": "Unclear boundaries, subjective interpretations, and philosophical debates",
+        "revision": "Existence can be understood through various lenses, including philosophical, scientific, and metaphysical perspectives. It encompasses not just physical entities but also abstract concepts, events, and relationships, making it a complex and multifaceted concept. The nature of existence is debated among philosophers, with some arguing for a materialistic view and others for an idealistic or existentialist stance.",
+        "final": "Existence is a multifaceted concept that encompasses everything real, including physical entities, abstract concepts, and relationships. Its nature is subject to various interpretations and debates across philosophy, science, and metaphysics.",
         "confidence": "medium",
         "sources": "common knowledge"
       }
     },
     "detailed": {
-      "gemma2-9b-it": {
-        "model": "llama3-8b",
-        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
-        "draft": "To exceed a 75% attendance rate, you need to attend 75% of 75 classes, which is 56.25 classes. You've already attended 51, so you need 5.25 more classes.",
-        "analysis": "The draft incorrectly assumes exceeding 75% means attending 75% of the total classes.  It also doesn't account for rounding.",
-        "revision": "To achieve over 75% attendance, you need to attend more than 56.25 out of 75 classes. You've already attended 51, so you need to attend an additional 5.25 classes.",
-        "final": "You've already attended a good portion of your classes! To surpass a 75% attendance rate, you'd need to attend at least 5 more classes.  Since you attend 4 classes per day, this would require an additional 1.25 days of perfect attendance.",
-        "confidence": "medium",
-        "sources": "common knowledge"
-      },
       "llama-3.3-70b-versatile": {
         "model": "llama3-8b",
-        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
-        "draft": "To exceed a 75 percent attendance rate, you need to attend more than 56.25 classes out of 75, so you need to attend additional classes to reach this threshold. With 4 classes per day, you would need to attend at least 2 more days of classes to exceed the 75 percent attendance rate.",
-        "analysis": "Assumes total classes remain at 75, and 75% threshold is calculated based on this total",
-        "revision": "First, calculate the minimum number of classes needed to exceed 75% attendance: 75 * 0.75 = 56.25, so you need more than 56 classes. You have already attended 51 classes, so you need to attend more than 56 - 51 = 5 classes. With 4 classes scheduled each day, you would need to attend at least 2 more days to exceed the 75 percent attendance rate, because attending 1 more day would only give you 4 additional classes, which is not enough.",
-        "final": "You need to attend more than 5 additional classes to exceed the 75 percent attendance rate. Since there are 4 classes per day, attending 2 more days will give you 8 additional classes, which exceeds the required number of classes. Therefore, you need 2 more days of perfect attendance to exceed a 75 percent attendance rate.",
+        "user_question": "What are the fundamental biological, chemical, and physical processes that define living organisms and distinguish them from non-living systems?",
+        "draft": "Living organisms are defined by processes such as metabolism, homeostasis, and reproduction, which are driven by chemical reactions and physical interactions. These processes distinguish living systems from non-living ones by enabling growth, response to stimuli, and adaptation to environments.",
+        "analysis": "Assumes a basic understanding of biology and chemistry, lacks specificity on physical processes, and does not fully address the distinction from non-living systems.",
+        "revision": "The fundamental processes include biological mechanisms like metabolism and reproduction, chemical reactions such as photosynthesis and respiration, and physical processes like diffusion and osmosis. These processes, particularly the ability to maintain homeostasis, respond to stimuli, and adapt, distinguish living organisms from non-living systems by facilitating complex interactions with their environment and ensuring survival and propagation.",
+        "final": "Living organisms are characterized by biological processes like metabolism and reproduction, chemical reactions such as photosynthesis, and physical processes like diffusion. These processes enable living systems to maintain homeostasis, respond to stimuli, and adapt, distinguishing them from non-living systems. Key aspects include the ability to grow, reproduce, and respond to environmental changes, which are not observed in non-living matter.",
         "confidence": "high",
         "sources": "common knowledge"
       },
       "llama3-70b-8192": {
         "model": "llama3-8b",
-        "user_question": "If I have already attended 51 out of 75 classes, with 4 classes scheduled each day, how many additional days of perfect attendance are required to exceed a 75 percent attendance rate?",
-        "draft": "To exceed 75 percent attendance, you need to attend at least 56 classes (75% of 75). You've already attended 51, so you need to attend 5 more classes. With 4 classes per day, you need 1.25 more days of perfect attendance.",
-        "analysis": "The draft assumes 75 percent of 75 classes is the target, but it's unclear if the 75 classes are the total or just the current count.",
-        "revision": "To exceed 75 percent attendance, you need to attend at least 56 classes (75% of 75). You've already attended 51, so you need to attend 5 more classes. With 4 classes per day, you need 1.25 more days of perfect attendance, assuming the total number of classes remains 75.",
-        "final": "You need 1.25 more days of perfect attendance to exceed a 75 percent attendance rate, assuming the total number of classes remains 75.",
+        "user_question": "What are the fundamental biological, chemical, and physical processes that define living organisms and distinguish them from non-living systems?",
+        "draft": "Living organisms are characterized by processes such as metabolism, homeostasis, and reproduction, which distinguish them from non-living systems.",
+        "analysis": "The draft lacks specificity and omits key processes; it also doesn't clearly explain how these processes define living organisms.",
+        "revision": "Living organisms are defined by fundamental biological processes like photosynthesis, respiration, and gene expression, as well as chemical processes such as metabolism and homeostasis, and physical processes like thermoregulation and movement, which collectively enable them to maintain organization, respond to stimuli, and reproduce.",
+        "final": "The fundamental biological, chemical, and physical processes that define living organisms and distinguish them from non-living systems include photosynthesis, respiration, gene expression, metabolism, homeostasis, thermoregulation, movement, and reproduction, which collectively enable living organisms to maintain organization, respond to stimuli, and reproduce.",
         "confidence": "high",
+        "sources": "common knowledge"
+      },
+      "gemma2-9b-it": {
+        "model": "llama3-8b",
+        "user_question": "What are the fundamental biological, chemical, and physical processes that define living organisms and distinguish them from non-living systems?",
+        "draft": "Living organisms are characterized by processes like metabolism, reproduction, and adaptation. These processes involve complex chemical reactions and physical interactions.",
+        "analysis": "The draft is too general and doesn't clearly differentiate between living and non-living. It needs to specify unique characteristics of life.",
+        "revision": "Living organisms exhibit unique processes like metabolism (converting energy), growth (increasing complexity), reproduction (creating offspring), and response to stimuli. These processes are driven by complex chemical reactions and physical interactions.",
+        "final": "Defining life is complex, but key processes distinguish living organisms from non-living matter.  Living things metabolize energy, grow and develop, reproduce, adapt to their environment, and respond to stimuli. These processes are governed by intricate chemical reactions and physical interactions, creating a self-sustaining system.",
+        "confidence": "medium",
         "sources": "common knowledge"
       }
     }
