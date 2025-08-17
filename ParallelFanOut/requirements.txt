@@ -1,5 +1,0 @@
-langchain
-faiss-cpu
-chromadb
-openai
-tiktoken
