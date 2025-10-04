@@ -1,21 +1,26 @@
-from groq import Groq
+import os
 import json
 import requests
-import os
+import subprocess
+from groq import Groq
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 
 # Initialize Groq client
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    raise ValueError("GROQ_API_KEY environment variable not set. Please set it in .env or environment.")
 
-# Example Tool: Database query placeholder
+client = Groq(api_key=api_key)
+
+# Tool: Database query placeholder
 def query_db(sql):
-    pass
+    pass  # Placeholder, not implemented
 
 # Tool: Run a shell command
 def run_command(command):
-    import subprocess
     try:
         output = subprocess.check_output(command, shell=True, text=True, stderr=subprocess.STDOUT)
         return output.strip()
@@ -24,22 +29,24 @@ def run_command(command):
 
 # Tool: Get weather from wttr.in
 def get_weather(city: str):
-    print("🔨 Tool called: get_weather", city)
-    url = f"https://wttr.in/{city}?format=%C+%t"
-    response = requests.get(url)
-    if response.status_code == 200:
+    print(f"🔨 Tool called: get_weather({city})")
+    try:
+        url = f"https://wttr.in/{city}?format=%C+%t"
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()  # Raise exception for bad status codes
         return f"The weather in {city} is {response.text}."
-    return "Something went wrong"
+    except requests.RequestException as e:
+        return f"Failed to fetch weather for {city}: {str(e)}"
 
-# List of tools
+# List of available tools
 available_tools = {
     "get_weather": {
         "fn": get_weather,
-        "description": "Takes a city name as an input and return the current weather for the city"
+        "description": "Takes a city name as input and returns the current weather for the city"
     },
     "run_command": {
         "fn": run_command,
-        "description": "Execute a command in the terminal"
+        "description": "Executes a command in the terminal"
     }
 }
 
@@ -69,8 +76,8 @@ Output JSON Format:
 }
 
 Available Tools:
-- get_weather: Takes a city name as an input and return the current weather for the city
-- run_command: Execute a command in the terminal
+- get_weather: Takes a city name as input and returns the current weather for the city
+- run_command: Executes a command in the terminal
 
 Example:
 User Query: What is the weather of New York?
@@ -86,37 +93,48 @@ messages = [{"role": "system", "content": system_prompt}]
 
 print("Welcome to Groq AI! Type your questions below (Ctrl+C to exit).")
 
-while True:
-    user_query = input("> ")
-    messages.append({"role": "user", "content": user_query})
-
+try:
     while True:
-        completion = client.chat.completions.create(
-            model="llama3-70b-8192",  # Groq's fast LLaMA model
-            response_format={"type": "json_object"},
-            messages=messages,
-            max_tokens=700,
-            temperature=0.4
-        )
+        user_query = input("> ")
+        messages.append({"role": "user", "content": user_query})
 
-        parsed_output = json.loads(completion.choices[0].message.content)
-        messages.append({"role": "assistant", "content": json.dumps(parsed_output)})
+        while True:
+            try:
+                completion = client.chat.completions.create(
+                    model="llama3-70b-8192",  # Groq's fast LLaMA model
+                    response_format={"type": "json_object"},
+                    messages=messages,
+                    max_tokens=700,
+                    temperature=0.4
+                )
+                parsed_output = json.loads(completion.choices[0].message.content)
+                messages.append({"role": "assistant", "content": json.dumps(parsed_output)})
 
-        # Step: Plan
-        if parsed_output.get("step") == "plan":
-            print(f"🧠: {parsed_output.get('content')}")
-            continue
+                # Step: Plan
+                if parsed_output.get("step") == "plan":
+                    print(f"🧠: {parsed_output.get('content')}")
+                    continue
 
-        # Step: Action
-        if parsed_output.get("step") == "action":
-            tool_name = parsed_output.get("function")
-            tool_input = parsed_output.get("input")
-            if tool_name in available_tools:
-                output = available_tools[tool_name]["fn"](tool_input)
-                messages.append({"role": "assistant", "content": json.dumps({"step": "observe", "output": output})})
-                continue
+                # Step: Action
+                if parsed_output.get("step") == "action":
+                    tool_name = parsed_output.get("function")
+                    tool_input = parsed_output.get("input")
+                    if tool_name in available_tools:
+                        output = available_tools[tool_name]["fn"](tool_input)
+                        messages.append({"role": "assistant", "content": json.dumps({"step": "observe", "output": output})})
+                        continue
 
-        # Step: Output
-        if parsed_output.get("step") == "output":
-            print(f"🤖: {parsed_output.get('content')}")
-            break
+                # Step: Output
+                if parsed_output.get("step") == "output":
+                    print(f"🤖: {parsed_output.get('content')}")
+                    break
+
+            except json.JSONDecodeError as e:
+                print(f"🤖: Error parsing model response: {str(e)}")
+                break
+            except Exception as e:
+                print(f"🤖: Error during processing: {str(e)}")
+                break
+
+except KeyboardInterrupt:
+    print("\nExiting Groq AI. Goodbye!")

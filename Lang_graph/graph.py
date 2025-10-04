@@ -72,7 +72,7 @@ def detect_query(state: State):
     parsed = DetectCallResponse(**message_content)
 
     state["is_coding_question"] = parsed.is_question_ai
-    print(state)
+    print("State is :",state)
     return state
 
 

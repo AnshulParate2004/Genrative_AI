@@ -29,15 +29,6 @@ print("DOCS", len(docs))  # number of pages
 print("SPLIT", len(split_docs))  # number of chunks pages are divided into
 
 # Embedding Data ( Vectorization of data )
-# 🧠 Embedding using Hugging Face (no API key needed)
-print("🧠 Creating embeddings (HuggingFace)...")
-from langchain_community.embeddings import HuggingFaceEmbeddings
-
-# Embedder
-embedder = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"  # 🧠 Small but good-quality transformer
-)
-print("✅ HuggingFace embeddings initialized.")
 
 # Vectore storage
 # 🧱 Vector Store (Qdrant)
@@ -54,6 +45,16 @@ for doc in split_docs:
                 texts.append(clean_text)
 
 print(f"📝 Prepared {len(texts)} clean text chunks.")
+
+# 🧠 Embedding using Hugging Face (no API key needed)
+print("🧠 Creating embeddings (HuggingFace)...")
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+# Embedder
+embedder = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"  # 🧠 Small but good-quality transformer
+)
+print("✅ HuggingFace embeddings initialized.")
 
 # ✅ Store embeddings in Qdrant
 print("📦 Connecting to Qdrant and storing vectors...")
