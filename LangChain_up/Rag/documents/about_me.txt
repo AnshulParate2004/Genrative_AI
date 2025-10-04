@@ -1,0 +1,58 @@
+Harish Neel
+Overview
+Harish Neel is an Indian software engineer, AI/ML specialist, and content creator. He has worked with leading companies such as Freshworks, Zoho, and Samsung. Harish is known for his expertise in web performance optimization, scalable application development, and developer mentorship. He holds a Master’s in Machine Learning and Software Integration from BITS Pilani and a Bachelor’s in Electrical and Electronics Engineering from SKCET, Coimbatore.
+
+In addition to his professional achievements, Harish runs a YouTube channel, where he shares insights on Software Development and AI. With a frequency of one video per week, his content focuses on empowering developers to build impactful AI products. His goal in creating his youtube channel is to get coders to build amazing AI solutions and start their own agencies 
+
+
+Early Life and Education
+Harish Neel was born and raised in India. He pursued his Bachelor of Engineering (BE) in Electrical and Electronics Engineering at Sri Krishna College of Engineering and Technology (SKCET), Coimbatore. Later, he advanced his academic career by enrolling in the prestigious BITS Pilani, earning a Master of Engineering (ME) in Machine Learning and Software Integration.
+
+Career
+Early Career and Freelancing
+Harish began his career during college, where he freelanced extensively, building a range of software products for clients worldwide. His notable freelance projects include:
+
+Ticket Booking App: A movie theatre ticket booking application with 800+ DAUs built using Vanilla JS and Bootstrap.
+Weather App: A weather forecasting tool leveraging the OpenWeather API, providing key metrics like UV maps, humidity, and wind predictions.
+Pharmaceutical E-Commerce Website: A React + Redux platform catering to over 5K monthly active users for buying medicines and surgical equipment.
+Health & Fitness E-Commerce Application: Built using React and Ant Design, featuring inventory management and serving 8K+ monthly users in the US.
+Landing Pages and Software Products: Developed over 20 custom projects for clients globally.
+These projects helped him refine his technical expertise while instilling values of self-belief and passion for problem-solving.
+
+Professional Career
+Samsung
+At Samsung, Harish worked as part of a core team managing Samsung.com, a platform generating over $1875 million ARR. His contributions include:
+
+Performance Optimization: Improved Lighthouse scores from 18 to 62 through techniques like memoization and lazy loading.
+Load Time Reduction: Reduced API-triggering times by 2000+ milliseconds.
+Product Page Design: Designed the Samsung Flip4 product page, incorporating a framework for seamless theme transitions.
+Mentorship: Guided over five individuals, including interns and full-time employees, to enhance their skills in web development and optimization.
+Zoho
+At Zoho, Harish played a pivotal role in modernizing the product’s codebase and improving application performance. Key achievements include:
+
+Migrated legacy React code to hooks-based architecture, emphasizing reusability and readability.
+Boosted Lighthouse performance by 40% and reduced initial load times by 1800 milliseconds.
+Conducted a full security audit, uncovering and fixing over 8-10 XSS vulnerabilities.
+Freshworks
+At Freshworks, Harish contributed to both frontend development and product documentation:
+
+Transitioned the codebase from jQuery to React, optimizing Freshworks Academy’s LMS page load time by 2.5x.
+Authored comprehensive documentation to help developers build extensions using Freshworks’ Marketplace platform.
+Resolved critical bugs in Ember.js and improved cross-functional communication between engineering and marketing teams.
+Content Creation and YouTube Channel
+In addition to his professional career, Harish is a content creator on YouTube, where he shares his knowledge and insights on Software Development and AI. His videos aim to empower developers by simplifying complex concepts and providing actionable guidance for building AI products.
+
+Harish publishes one video every week, with a focus on practical examples and tutorials designed to inspire and educate his audience.
+
+Personal Projects and Philosophy
+Harish believes in the power of collaboration and innovation. His personal philosophy revolves around self-belief, passion for problem-solving, and a commitment to building impactful software products.
+
+Legacy and Vision
+Harish’s career has been defined by his technical acumen and leadership qualities. As a mentor and innovator, he continues to inspire peers and junior developers. He is actively seeking opportunities to collaborate with like-minded individuals to develop next-generation technologies.
+
+
+
+External Links
+LinkedIn: https://www.linkedin.com/in/harishneel/
+Portfolio: nucleushq.io
+YouTube Channel: https://www.youtube.com/@harish_neel
