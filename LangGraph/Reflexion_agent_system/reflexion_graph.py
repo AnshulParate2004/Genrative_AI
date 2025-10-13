@@ -5,7 +5,7 @@ from chains import revisor_chain, first_responder_chain
 from execute_tools import execute_tools
 from schema import AnswerQuestion
 
-graph = StateGraph(state_schema=AnswerQuestion)
+graph = StateGraph(AnswerQuestion)
 MAX_ITERATIONS = 2
 
 graph.add_node("draft",first_responder_chain)
