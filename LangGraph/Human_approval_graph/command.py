@@ -5,9 +5,9 @@ from typing import TypedDict
 class State(TypedDict):
     text: str
 
-def node_a(state: State): 
+def node_a(state: State):
+    print("Current text:", state["text"]) 
     print("Node A")
-    print("Current text:", state["text"])
     return Command(
         goto="node_b", 
         update={
@@ -16,8 +16,8 @@ def node_a(state: State):
     )
 
 def node_b(state: State): 
-    print("Node B")
     print("Current text:", state["text"])
+    print("Node B")
     return Command(
         goto="node_c", 
         update={
@@ -27,8 +27,8 @@ def node_b(state: State):
 
 
 def node_c(state: State): 
+    print("Current text:", state["text"]) 
     print("Node C")
-    print("Current text:", state["text"])
     return Command(
         goto=END, 
         update={
