@@ -2,14 +2,16 @@ from typing import TypedDict, Annotated
 from langchain_core.messages import HumanMessage
 from langgraph.graph import add_messages, StateGraph, END
 from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv()
 
 class State(TypedDict): 
     messages: Annotated[list, add_messages]
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro")
 
 GENERATE_POST = "generate_post"
-GET_REVIEW_DECISION = "get_review_decision"
+GET_REVIEW_DECISION = "get_review_decision" # is a conditional node (edge case)
 POST = "post"
 COLLECT_FEEDBACK = "collect_feedback"
 
@@ -48,7 +50,6 @@ def collect_feedback(state: State):
 graph = StateGraph(State)
 
 graph.add_node(GENERATE_POST, generate_post)
-graph.add_node(GET_REVIEW_DECISION, get_review_decision)
 graph.add_node(COLLECT_FEEDBACK, collect_feedback)
 graph.add_node(POST, post)
 
@@ -65,13 +66,3 @@ response = app.invoke({
 })
 
 print(response)
-
-
-
-
-
- 
-
-
-
-
