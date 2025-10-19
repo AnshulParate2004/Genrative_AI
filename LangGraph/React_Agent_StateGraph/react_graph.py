@@ -12,7 +12,6 @@ def reason_node(state: AgentState):
     agent_outcome = react_agent_runnable.invoke(state)
     return {"agent_outcome": agent_outcome}
 
-
 def act_node(state: AgentState):
     agent_action = state["agent_outcome"]
     
@@ -54,7 +53,6 @@ graph = StateGraph(AgentState)
 graph.add_node(REASON_NODE, reason_node)
 graph.set_entry_point(REASON_NODE)
 graph.add_node(ACT_NODE, act_node)
-
 
 graph.add_conditional_edges(
     REASON_NODE,
