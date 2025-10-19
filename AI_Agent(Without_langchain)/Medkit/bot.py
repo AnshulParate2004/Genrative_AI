@@ -12,13 +12,12 @@ from datetime import date
 
 # Akash API configuration
 AKASH_API_ENDPOINT = "https://api.akash.chat/v1"
-AKASH_API_KEY = "sk-kSOuRSNOgj1XmRUm6rk48A"
+
 REQUEST_TIMEOUT = 15  # seconds for normal requests
 DOCUMENT_TIMEOUT = 60  # seconds for document processing
 
 # Gemini API configuration
 GEMINI_API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
-GEMINI_API_KEY = "AIzaSyCi4LebK3sHoI-qL58OEdkcsyEndFWFYo4"
 
 def get_patient_context(patient: Dict[str, Any]) -> str:
     """Generate comprehensive context from patient data including visits, tests, medications, and files."""
