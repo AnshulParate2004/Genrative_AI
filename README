@@ -114,29 +114,6 @@ This journey taught me how the entire Agentic AI ecosystem fits together — fro
 
 My ultimate goal is to master the synergy between **LLMs, graphs, and stateful workflows** — building AI that not only answers but **understands, learns, and collaborates**.
 
----
-
-## 📂 Repository Structure (if applicable)
-├── /langchain-experiments/
-│ ├── tool_chains.ipynb
-│ ├── agent_with_memory.py
-├── /langgraph-projects/
-│ ├── state_graph_agent.py
-│ ├── multi_agent_pipeline.py
-├── /monitoring/
-│ ├── langsmith_tracking.py
-│ ├── langfuse_tracing.py
-├── /vector-memory/
-│ ├── qdrant_rag_pipeline.py
-│ ├── chroma_search_demo.ipynb
-├── /knowledge-graph/
-│ ├── neo4j_integration.py
-│ ├── graph_reasoning_agent.py
-└── /custom-agent/
-├── agent_core.py
-├── tool_manager.py
-├── state_handler.py
-
 
 ---
 
