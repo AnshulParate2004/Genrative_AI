@@ -137,12 +137,8 @@ My ultimate goal is to master the synergy between **LLMs, graphs, and stateful w
 ├── tool_manager.py
 ├── state_handler.py
 
-yaml
-Copy code
 
 ---
 
 ### 🧩 Tags
 `#LangChain` `#LangGraph` `#LangSmith` `#LangFuse` `#Neo4j` `#Qdrant` `#Chroma` `#AgenticAI` `#RAG` `#LLM` `#Python`  
-
----
