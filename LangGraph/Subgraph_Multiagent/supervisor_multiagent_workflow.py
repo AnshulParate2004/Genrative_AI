@@ -119,16 +119,18 @@ def research_node(state: MessagesState) -> Command[Literal["validator"]]:
         and returns findings for validation.
     """
 
+    promt = """You are an Information Specialist with expertise in comprehensive research. Your responsibilities include:\n\n
+            -1. Identifying key information needs based on the query context\n
+            -2. Gathering relevant, accurate, and up-to-date information from reliable sources\n
+            -3. Organizing findings in a structured, easily digestible format\n
+            -4. Citing sources when possible to establish credibility\n
+            -5. Focusing exclusively on information gathering - avoid analysis or implementation\n\n
+            -Provide thorough, factual responses without speculation where information is unavailable."""
     research_agent = create_react_agent(
         llm,
         tools=[tavily_search],
-        state_modifier= "You are an Information Specialist with expertise in comprehensive research. Your responsibilities include:\n\n"
-            "1. Identifying key information needs based on the query context\n"
-            "2. Gathering relevant, accurate, and up-to-date information from reliable sources\n"
-            "3. Organizing findings in a structured, easily digestible format\n"
-            "4. Citing sources when possible to establish credibility\n"
-            "5. Focusing exclusively on information gathering - avoid analysis or implementation\n\n"
-            "Provide thorough, factual responses without speculation where information is unavailable."
+        prompt=promt
+          
     )
 
     result = research_agent.invoke(state)
@@ -253,12 +255,55 @@ inputs = {
     ]
 }
 
-for event in app.stream(inputs):
-    for key, value in event.items():
-        if value is None:
-            continue
-        last_message = value.get("messages", [])[-1] if "messages" in value else None
-        if last_message:
-            pprint.pprint(f"Output from node '{key}':")
-            pprint.pprint(last_message, indent=2, width=80, depth=None)
-            print()
+# for event in app.stream(inputs):
+#     for key, value in event.items():
+#         if value is None:
+#             continue
+#         last_message = value.get("messages", [])[-1] if "messages" in value else None
+#         if last_message:
+#             pprint.pprint(f"Output from node '{key}':")
+#             pprint.pprint(last_message, indent=2, width=80, depth=None)
+#             print()
+
+
+# ############## answer ###################
+
+# # --- Workflow Transition: Supervisor → RESEARCHER ---
+# # "Output from node 'supervisor':"
+# # HumanMessage(content='The user has requested information about the weather in Chennai, which requires collecting current data. This task is best handled by the Researcher, who can gather updated weather information for Chennai, including temperature, humidity, and other relevant weather conditions.', additional_kwargs={}, response_metadata={}, name='supervisor', id='065305be-5bd8-419a-b53b-bebca2f9ca66')
+
+# # --- Workflow Transition: Researcher → Validator ---
+# # "Output from node 'researcher':"
+# # HumanMessage(content='The current weather in Chennai is as follows:\n\n- **Temperature**: 34.2°C (93.6°F)\n- **Condition**: Partly cloudy\n- **Wind Speed**: 13.6 mph (22.0 kph) from the northeast\n- **Humidity**: 56%\n- **Pressure**: 1008.0 mb (29.77 in)\n- **Visibility**: 6 kilometers (3 miles)\n- **UV Index**: 9.6\n- **Feels Like**: 42.4°C (108.4°F)\n\nAdditional temperatures today range from a minimum of around 27°C to a maximum of approximately 32°C.\n\nFor more details, you can check the weather updates from sources such as [India Today](https://www.indiatoday.in/weather/chennai-weather-forecast-today) and weather services like [WeatherAPI](https://www.weatherapi.com/).', additional_kwargs={}, response_metadata={}, name='researcher', id='89c0f335-4e99-4743-867c-2735d4ffba30')
+
+# #  --- Transitioning to END ---
+# # "Output from node 'validator':"
+# # HumanMessage(content="The answer provides a detailed current weather report for Chennai, addressing the user's query about the weather. It includes temperature, condition, wind speed, humidity, pressure, visibility, UV index, and feels-like temperature. The response is sufficient for the user's general question about the weather in Chennai.", additional_kwargs={}, response_metadata={}, name='validator', id='a16c08e5-54a9-4c27-a557-4b66341638be')
+
+# import pprint
+
+# inputs = {
+#     "messages": [
+#         ("user", "Give me the 20th fibonacci number"),
+#     ]
+# }
+# for event in app.stream(inputs):
+#     for key, value in event.items():
+#         if value is None:
+#             continue
+#         pprint.pprint(f"Output from node '{key}':")
+#         pprint.pprint(value, indent=2, width=80, depth=None)
+#         print()
+
+# ############# Answer ##############
+# # --- Workflow Transition: Supervisor → CODER ---
+# # "Output from node 'supervisor':"
+# # { 'messages': [ HumanMessage(content='The user is requesting a specific numerical result from a well-defined sequence, the Fibonacci sequence, which is best served by calculating the value using a coding implementation. The problem is clear and structured, making it appropriate to move directly to the Coder for computation.', additional_kwargs={}, response_metadata={}, name='supervisor', id='87be29a9-57af-4c6d-b5c1-a8247818b65b')]}
+
+# # --- Workflow Transition: Coder → Validator ---
+# # "Output from node 'coder':"
+# # { 'messages': [ HumanMessage(content='The 20th Fibonacci number is 6765.', additional_kwargs={}, response_metadata={}, name='coder', id='dfedec00-14f1-413e-9ee3-72257b362f5d')]}
+
+# #  --- Transitioning to END ---
+# # "Output from node 'validator':"
+# # { 'messages': [ HumanMessage(content="The answer correctly identifies the 20th Fibonacci number, addressing the user's request.", additional_kwargs={}, response_metadata={}, name='validator', id='fdd556cd-0b42-41a6-83b4-7ee4e3663e2e')]}
