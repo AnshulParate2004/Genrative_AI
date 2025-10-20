@@ -1,5 +1,22 @@
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 
+
+
+
+####################### How CharacterTextSplitter works #############
+"""
+In this approch ,same as CharacterTextSplitter, we split text based on specified character limits.
+However, RecursiveCharacterTextSplitter improves upon this by using a hierarchy of separators to find optimal split points.
+It first attempts to split using larger separators (like double newlines) before falling back to smaller ones (like spaces or no separator).
+This ensures that chunks are more semantically coherent and reduces the chances of splitting in the middle of sentences or important phrases.
+"""
+
+
+
+
+
+
+
 tesla_text = """Tesla's Q3 Results
 
 Tesla reported record revenue of $25.2B in Q3 2024.

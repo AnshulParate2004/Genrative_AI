@@ -3,6 +3,11 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
+##################### How Agentic Chunking works ############
+"""
+In this approach, we leverage an AI language model 
+to intelligently chunk text based on content and context.
+"""
 
 # Initialize the LLM
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.2)
