@@ -15,6 +15,7 @@ env/
 # PyCharm
 .idea/
 
+node_modules/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
@@ -39,3 +40,19 @@ dist/
 # Cache files
 *.pyc
 .cache/
+
+# UV lock files and package manager files
+uv.lock
+*.lock
+poetry.lock
+Pipfile.lock
+
+# Requirements files (if auto-generated)
+requirements.txt
+
+# Large binary or compiled files
+*.whl
+*.exe
+*.dll
+*.so
+*.dylib

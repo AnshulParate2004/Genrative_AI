@@ -1,0 +1,11 @@
+{
+    "mcpServers":{
+        "weatherData":{
+            "command":"node",
+            "args": ["D:/Learning/Genrative_AI/MCP_Server/index.js"],
+            "env": {
+                "API_KEY": "value"
+            }
+        }
+    }
+}

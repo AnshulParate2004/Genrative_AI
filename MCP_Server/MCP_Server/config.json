@@ -1,0 +1,16 @@
+{
+    "mcpServers":{
+        "weatherData":{
+            "command":"C:/Users/KAIZEN/.local/bin/uv.exe",
+            "args": [
+                "--directory",
+                "D:/Learning/Genrative_AI/MCP_Server/MCP_Server",
+                "run",
+                "MCP_server.py"
+            ],
+            "env": {
+                "API_KEY": "value"
+            }
+        }
+    }
+}
