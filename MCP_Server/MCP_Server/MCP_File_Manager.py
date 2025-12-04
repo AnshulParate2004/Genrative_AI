@@ -11,16 +11,9 @@ from typing import Optional, Literal
 
 load_dotenv()
 
-mcp = FastMCP("MCP Server")
+mcp = FastMCP("MCP_File_Manager")
 
 USER_AGENT = "docs-app/1.0"
-SERPER_URL = "https://google.serper.dev/search"
-
-docs_urls = {
-    "langchain": "python.langchain.com/docs",
-    "llama-index": "docs.llamaindex.ai/en/stable",
-    "openai": "platform.openai.com/docs",
-}
 
 @mcp.tool()
 async def run_command(command: str, shell: bool = True):
