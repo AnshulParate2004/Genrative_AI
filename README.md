@@ -192,21 +192,63 @@ Explored 7 different chunking methods for optimal RAG performance:
 
 ## 🛠️ MCP Server Development
 
-Building Model Context Protocol servers for extending LLM capabilities.
+Building Model Context Protocol servers to extend LLM capabilities with custom tools and integrations.
 
-### **MCP_Server (Python)**
-- **`MCP_File_Manager.py`** (27.8KB) - Comprehensive file operations server
-  - Read, write, edit, search, and manage files
-  - Support for various text encodings
-  - VS Code integration
-- **`MCP_Google_Auth.py`** - Google OAuth integration for MCP
-- **`config.json`** - Server configuration and settings
+### **What is MCP?**
+Model Context Protocol standardizes how applications provide context to LLMs through:
+- Custom tool integration
+- Resource access (files, databases, APIs)
+- Client-server architecture
 
-### **MCP_Server (TypeScript)**
-- **`MCP_Server(tsx)/`** - TypeScript implementation for Node.js environments
+### **Python MCP Servers**
 
-### **MCP Client**
-- **`mcp-client/`** - Client implementations for testing MCP servers
+#### **File Manager Server** (27.8KB)
+Comprehensive file operations server with production-ready features:
+- Read/write operations with multiple encodings
+- Advanced editing (position-based, find & replace)
+- Directory management with glob patterns
+- VS Code integration
+- Smart text insertion and deletion
+
+#### **Google Auth Server** (12.3KB)
+OAuth integration for secure API access:
+- Google OAuth 2.0 flow implementation
+- Automatic token refresh
+- User profile access
+
+### **TypeScript MCP Server**
+
+#### **Weather Data Server**
+Node.js implementation demonstrating core MCP concepts:
+- Zod schema validation
+- Stdio transport pattern
+- City-based data retrieval
+
+### **Full-Stack MCP Application**
+
+#### **FastAPI Backend**
+Complete REST API wrapping MCP functionality:
+- `/query` endpoint - Send queries to Gemini with MCP tools
+- `/tools` endpoint - List available MCP tools
+- Async lifecycle management
+- CORS configuration for frontend integration
+
+#### **MCP Client**
+Sophisticated client managing:
+- Server connection and tool discovery
+- Gemini LLM integration
+- Conversation history
+- Tool execution orchestration
+
+**Architecture:**
+```
+Frontend → FastAPI → MCP Client → MCP Server → Gemini LLM
+```
+
+### **Key MCP Technologies**
+- **Python**: mcp SDK, FastAPI, Pydantic, UV package manager
+- **TypeScript**: @modelcontextprotocol/sdk, Zod, Node.js
+- **Deployment**: Config-based server management, environment variables
 
 ---
 
@@ -223,6 +265,8 @@ Building Model Context Protocol servers for extending LLM capabilities.
 - **LangGraph** - Stateful multi-agent workflows
 - **Mem0** - Long-term memory management
 - **Pydantic** - Data validation and structured outputs
+- **FastAPI** - Modern web framework for APIs
+- **MCP SDK** - Model Context Protocol implementation
 
 ### **Vector Databases & Storage**
 - **ChromaDB** - Local vector storage for RAG
@@ -235,18 +279,23 @@ Building Model Context Protocol servers for extending LLM capabilities.
 - **Python REPL Tool** - Code execution in agents
 - **Serper API** - Search engine integration
 - **HuggingFace** - Model hosting and embeddings
+- **MCP Tools** - Custom tool integration via Model Context Protocol
 
 ### **Development Tools**
 - **Docker Compose** - Service orchestration
 - **Neo4j** - Graph database for knowledge graphs
-- **VS Code** - Primary IDE with file manager integration
+- **VS Code** - Primary IDE with MCP integration
+- **UV** - Modern Python package manager
+- **pnpm** - Fast Node.js package manager
+- **Zod** - TypeScript schema validation
 
 ---
 
 ## 📊 Project Statistics
 
-- **Total Files**: 100+ Python scripts, notebooks, and configurations
-- **Lines of Code**: ~15,000+
+- **Total Files**: 120+ Python scripts, TypeScript modules, notebooks, and configurations
+- **Lines of Code**: ~20,000+
+- **MCP Servers**: 3 production-ready implementations
 - **Topics Covered**: 
   - Prompt Engineering
   - Chain Building (Sequential, Parallel, Conditional)
@@ -269,7 +318,8 @@ Building Model Context Protocol servers for extending LLM capabilities.
 5. **Memory Architecture**: Created hybrid memory systems combining short-term and long-term storage
 6. **Multi-Agent Coordination**: Developed supervisor patterns for specialist agent orchestration
 7. **RAG Optimization**: Experimented with 7 chunking strategies for optimal retrieval
-8. **Custom Tools**: Extended LLM capabilities through MCP servers and custom tool integration
+8. **MCP Protocol**: Built production-ready servers extending LLM capabilities with custom tools
+9. **Full-Stack AI**: Created complete applications integrating LLMs, APIs, and tool orchestration
 
 ---
 
@@ -277,9 +327,9 @@ Building Model Context Protocol servers for extending LLM capabilities.
 
 - [ ] Advanced prompt optimization techniques
 - [ ] Fine-tuning custom models
-- [ ] Production deployment strategies
 - [ ] Performance benchmarking across providers
 - [ ] Building domain-specific AI applications
+
 
 ---
 
@@ -301,11 +351,19 @@ Building Model Context Protocol servers for extending LLM capabilities.
 - Production-ready error handling
 - Efficient vector similarity search
 
+### **Most Innovative**: Full-Stack MCP Application
+- Complete REST API with tool orchestration
+- Gemini LLM integration with custom tools
+- Async architecture with lifecycle management
+- Production-ready with CORS and error handling
+
 ---
 
 ## 📝 Notes
 
-This repository represents my journey from LangChain basics to building sophisticated multi-agent systems. Each file contains working code with detailed comments explaining the concepts. The progression shows evolution from simple chains to complex orchestration systems.
+This repository represents my journey from LangChain basics to building sophisticated multi-agent systems and production-ready MCP servers. Each component demonstrates hands-on learning with working code, detailed comments, and real-world applications.
+
+The progression shows evolution from simple chains to complex orchestration systems, culminating in extensible AI infrastructure through the Model Context Protocol.
 
 Feel free to explore, learn, and build upon these examples!
 
