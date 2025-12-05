@@ -1,7 +1,6 @@
-
-
 def main():
-    print("Hello from mcp-client!")
+    print("Hello from my-mcp!")
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "tell me files at D:/Learning/Genrative_AI/MCP_Server/MY-MCP/api"
+  },
+  {
+    "role": "assistant",
+    "content": "I just listed the files for that directory. Would you like me to do something else with them?"
+  }
+]

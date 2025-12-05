@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "tell me files at D:/Learning/Genrative_AI/MCP_Server/MY-MCP/api"
+  },
+  {
+    "role": "assistant",
+    "tool_calls": [
+      {
+        "name": "list_files",
+        "args": {
+          "directory": "D:/Learning/Genrative_AI/MCP_Server/MY-MCP/api"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_name": "list_files",
+    "content": "Directory: D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\api\nPattern: *\nFound 6 file(s)\n==================================================\n[FILE] main.py (2839 bytes)\n[FILE] mcp_client.log (1769 bytes)\n[FILE] mcp_client.py (12727 bytes)\n[FILE] tools_server.py (27803 bytes)\n[DIR] utils (0 bytes)\n[DIR] __pycache__ (0 bytes)\n"
+  },
+  {
+    "role": "assistant",
+    "content": "None"
+  }
+]

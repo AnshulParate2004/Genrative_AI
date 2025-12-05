@@ -1,0 +1,27 @@
+[
+  {
+    "role": "user",
+    "content": "Read this file: D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md and write something in file like hello world"
+  },
+  {
+    "role": "assistant",
+    "tool_calls": [
+      {
+        "name": "write_file",
+        "args": {
+          "content": "hello world",
+          "filepath": "D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_name": "write_file",
+    "content": "Created/Overwritten file successfully!\nPath: D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md\nSize: 11 bytes\nContent length: 11 characters"
+  },
+  {
+    "role": "assistant",
+    "content": "None"
+  }
+]

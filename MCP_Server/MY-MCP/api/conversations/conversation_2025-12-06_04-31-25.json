@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "Read this file: D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md and write something"
+  },
+  {
+    "role": "assistant",
+    "tool_calls": [
+      {
+        "name": "read_file",
+        "args": {
+          "filepath": "D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_name": "read_file",
+    "content": "File: D:\\Learning\\Genrative_AI\\MCP_Server\\MY-MCP\\README.md\nSize: 0 bytes\n==================================================\n"
+  },
+  {
+    "role": "assistant",
+    "content": "None"
+  }
+]

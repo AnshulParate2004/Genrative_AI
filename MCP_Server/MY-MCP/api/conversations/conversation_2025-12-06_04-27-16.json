@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": " Tell me which tools you can use"
+  },
+  {
+    "role": "assistant",
+    "content": "I have a set of tools that allow me to interact with your file system and execute commands. Here's a summary of what I can do:\n\n*   **run_command**: I can execute system commands, like `pip install`, `npm install`, or `git clone`.\n*   **write_file**: I can create new files or overwrite existing ones with new content.\n*   **append_to_file**: I can add content to existing files, either at the end or near specific markers in the text.\n*   **read_file**: I can read the contents of a file.\n*   **list_files**: I can list the files and directories in a given path.\n*   **open_in_vscode**: I can open a specified file in Visual Studio Code.\n*   **delete_text_from_file**: I can remove a specific range of characters from a file.\n*   **edit_file_at_position**: I can insert or replace text at a precise line and column or byte index within a file.\n*   **find_and_replace**: I can find and replace specific text within a file.\n*   **insert_at_line**: I can insert text at the beginning or end of a specific line in a file."
+  }
+]
