@@ -1,13 +1,17 @@
 [project]
-name = "mcp-client"
+name = "my-mcp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "aiohttp>=3.13.2",
     "anthropic>=0.75.0",
+    "fastapi>=0.123.9",
     "google-generativeai>=0.8.5",
-    "mcp>=1.22.0",
+    "mcp>=1.23.1",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.12.0",
     "python-dotenv>=1.2.1",
     "utils>=1.0.2",
 ]
